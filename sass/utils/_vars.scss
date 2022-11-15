@@ -1,5 +1,5 @@
 $colors: (
-  'background': #84a178,
+  'main': #20b6c9,
 
   'txt-white': #fcfcfc,
   'txt-black': #131313,
@@ -22,9 +22,9 @@ $colors: (
 
 $animation: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
-$mobile: 320px;
-$tablet: 768px;
-$desktop: 1200px;
+$mobile: 360px;
+$tablet: 720px;
+$desktop: 1290px;
 
 @function getColor($key) {
   @return map-get($colors, $key);
