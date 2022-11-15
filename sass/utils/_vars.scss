@@ -1,0 +1,31 @@
+$colors: (
+  'background': #84a178,
+
+  'txt-white': #fcfcfc,
+  'txt-black': #131313,
+  'txt-green': #d6936d,
+  'txt-grey': #ababab,
+
+  'icecream-background': #aec6a5,
+  'icecofee-background': #efd478,
+  'milkshakes-background': #d6936d,
+
+  'btn-default': #f8d24e,
+  'btn-hover': #0a8817,
+  'btn-focus': #0a8817,
+  'btn-disabled': #ababab,
+
+  'accent': #f8d24e,
+
+  'footer-copyrights': #7a7a7a,
+);
+
+$animation: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+$mobile: 320px;
+$tablet: 768px;
+$desktop: 1200px;
+
+@function getColor($key) {
+  @return map-get($colors, $key);
+}

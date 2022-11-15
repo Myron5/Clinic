@@ -1,0 +1,65 @@
+{
+  "liveServer.settings.port": 5501,
+  "liveSassCompile.settings.formats": [
+    // {
+    //   "format": "expanded",
+    //   "extensionName": ".css",
+    //   "savePath": "/css"
+    // },
+    {
+      "format": "compressed",
+      "extensionName": ".min.css",
+      "savePath": "/css"
+    }
+  ],
+  "liveSassCompile.settings.excludeList": ["/**/node_modules/**", "/.vscode/**", "/**/utils/**"],
+  "liveSassCompile.settings.generateMap": true,
+  "liveSassCompile.settings.autoprefix": ["> 1%", "last 2 versions"],
+  "liveSassCompile.settings.showOutputWindowOn": "None",
+
+  "editor.tokenColorCustomizations": {
+    "textMateRules": [
+      // comment
+      {
+        "scope": ["comment"],
+        "settings": {
+          "foreground": "#0f0",
+          "fontStyle": "italic"
+        }
+      },
+
+      // colour of attributes
+      {
+        "scope": ["entity.other.attribute-name.html"],
+        "settings": {
+          "foreground": "#d598a3"
+        }
+      },
+
+      // colour of class names
+      {
+        "scope": ["string.quoted.double.html", "entity.other.attribute-name.class.css"],
+        "settings": {
+          "foreground": "#2498fa"
+        }
+      },
+
+      // colour of start quotes
+      {
+        "scope": ["punctuation.definition.string.begin.html"],
+        "settings": {
+          "foreground": "#d598a3"
+        }
+      },
+
+      // colour of end quotes
+      {
+        "scope": ["punctuation.definition.string.end.html"],
+        "settings": {
+          "foreground": "#d598a3"
+        }
+      }
+    ]
+  },
+  "workbench.colorTheme": "Winter is Coming (Dark Blue)"
+}

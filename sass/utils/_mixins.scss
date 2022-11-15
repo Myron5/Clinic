@@ -1,0 +1,91 @@
+// Міксін створений для стилізації тексту \родина шрифту\вага шрифту\розмір шрифту\висота лінії\проміжок між літерами
+@mixin fonts($ff: Montserrat, $fw: 400, $fs: 14px, $lh: 16px, $ls: 0) {
+   font-family: $ff;
+   font-weight: $fw;
+   font-size: $fs;
+   line-height: calc($lh / $fs);
+   letter-spacing: $ls;
+}
+
+// Міксін створений для центрвання блоку \не потребує додаткових параметрів\
+@mixin margin-auto() {
+   margin: 0 auto;
+}
+
+// Міксін створений для викорсиатння flex-y до елемента \центрування по вертикальній осі\центрування по горизонтальній осі\проміжки між елементами\направління\
+@mixin flex($ai: center, $jc: center, $gap: 32px, $fd: row) {
+   display: flex;
+   align-items: $ai;
+   justify-content: $jc;
+   gap: $gap;
+   flex-direction: $fd;
+}
+
+// Міксін для створення геометричних фігур \ширина\висота\закруглення кутів\рамка\тінь\колір фону\
+@mixin block($w: 100px,
+   $h: auto,
+   $radius: 0,
+   $border: 0,
+   $shadow: 0,
+   $bg: transparent) {
+   width: $w;
+   height: $h;
+   border-radius: $radius;
+   border: $border;
+   box-shadow: $shadow;
+   background: $bg;
+}
+
+// Центрування елементу на сторінці абсолютне позіціонування
+@mixin centerAbsolute($top: 50%, $left: 50%, $transX: -50%, $transY: -50%) {
+   position: absolute;
+   top: $top;
+   left: $left;
+   transform: translate($transX, $transY);
+}
+
+//  Медіа правило для мобілки
+@mixin mobile() {
+   @media (max-width: 767px) {
+      @content;
+   }
+}
+
+//  Медіа правило для таблетки
+@mixin tablet() {
+   @media (min-width: 768px) and (max-width: 1199px) {
+      @content;
+   }
+}
+
+//  Медіа правило для десктопа
+@mixin desktop() {
+   @media (min-width: 1200px) {
+      @content;
+   }
+}
+
+//  Ретінізоване зображення
+@mixin isRetinaDisplay() {
+
+   @media (min-device-pixel-ratio: 2),
+   (min-resolution: 192dpi),
+   (min-resolution: 2dppx) {
+      @content;
+   }
+}
+
+//  Неретінізоване зображення
+@mixin isNotRetinaDisplay() {
+
+   @media (max-device-pixel-ratio: 1),
+   (min-resolution: 96dpi),
+   (min-resolution: 1dppx) {
+      @content;
+   }
+}
+
+//  Міксін створений для налаштування анімацій \властивість, яку анімуємо\
+@mixin animation($item) {
+   transition: $item 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
