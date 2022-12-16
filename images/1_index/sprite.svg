@@ -1,0 +1,29 @@
+<svg aria-hidden="true" style="position:absolute;width:0;height:0;overflow:hidden" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <symbol id="main-faq" viewBox="0 0 30 32">
+      <path fill="none" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="4" stroke-width="2.1333"
+        d="M25.154 1.105h-20.442c-1.993 0.002-3.607 1.618-3.607 3.611 0 0.001 0 0.002 0 0.003v-0 13.182c0 0.001 0 0.002 0 0.003 0 1.993 1.615 3.609 3.607 3.611h1.579v8.505l8.642-8.505h10.221c1.993-0.002 3.607-1.618 3.607-3.611 0-0.001 0-0.002 0-0.003v0-13.182c0-0.001 0-0.002 0-0.003 0-1.993-1.615-3.609-3.607-3.611h-0zM8.019 7.908h13.828M8.019 14.711h8.643">
+      </path>
+    </symbol>
+    <symbol id="main-tel" viewBox="0 0 32 32">
+      <path fill="none" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="4" stroke-width="2.4615"
+        d="M30.505 23.215v4.368c0.007 1.669-1.494 3.065-3.18 2.911-14.548 0.012-25.83-11.375-25.818-25.825-0.153-1.676 1.234-3.172 2.902-3.174h4.377c0.009-0 0.019-0 0.029-0 0.728 0 1.394 0.267 1.906 0.707l-0.004-0.003c1.526 1.311 2.507 5.756 2.129 7.524-0.295 1.378-1.686 2.345-2.631 3.289 2.115 3.666 5.081 6.626 8.639 8.675l0.113 0.060c0.945-0.944 1.913-2.332 3.296-2.626 1.772-0.378 6.247 0.606 7.552 2.142 0.463 0.545 0.708 1.241 0.69 1.954zM20.030 7.136c1.188 0.231 2.368 0.756 3.223 1.612 0.855 0.855 1.38 2.034 1.612 3.222M20.836 1.494c2.468 0.274 4.689 1.468 6.447 3.225 1.758 1.754 2.945 3.978 3.223 6.447">
+      </path>
+    </symbol>
+
+    <!-- Тут знаходяться background css svg-sprite -->
+    <style>
+      .img {
+        display: none;
+      }
+
+      .img:target {
+        display: inline;
+      }
+    </style>
+  </defs>
+  <g id="link-arrow" class="img" viewBox="0 0 14 10" fill="none">
+    <path d="M1 5h11m0 0L7.667 9M12 5 7.667 1" stroke="#2E3A40" stroke-width="2" stroke-linecap="round" />
+  </g>
+
+</svg>

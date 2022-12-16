@@ -1,5 +1,5 @@
 {
-  "liveServer.settings.port": 5501,
+  "liveServer.settings.port": 666,
   "liveSassCompile.settings.formats": [
     // {
     //   "format": "expanded",
@@ -61,5 +61,5 @@
       }
     ]
   },
-  "workbench.colorTheme": "Winter is Coming (Dark Blue)"
+  "workbench.colorTheme": "Monokai"
 }

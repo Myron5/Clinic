@@ -1,17 +1,2 @@
-@import '../base/normalize';
-@import '../base/reset';
-
-@import '../utils/vars';
-@import '../utils/mixins';
-@import '../utils/additional';
-
-@import '../base/styles';
-
-.header {
-  &__logo {
-    color: getColor('main');
-  }
-  &__icon {
-    fill: getColor('main');
-  }
-}
+@import './1_index/hero';
+@import './1_index/abbility';
