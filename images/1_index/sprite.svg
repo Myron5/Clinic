@@ -26,4 +26,19 @@
     <path d="M1 5h11m0 0L7.667 9M12 5 7.667 1" stroke="#2E3A40" stroke-width="2" stroke-linecap="round" />
   </g>
 
+
+  <g id="about-arrow" class="img" viewBox="0 0 22 32" fill="none">
+    <path
+      d="M21 31C13.377 23.905 7.18 13.927 5.094 3.67m5.854 3.353C7.575 5.631 5.05 3.451 4.55 1 5.05 3.451 3.57 6.416 1 8.972"
+      stroke="#fff" stroke-width="2" stroke-linecap="round" />
+  </g>
+
+  <g id="about-eye" class="img" viewBox="0 0 102 102" fill="none">
+    <circle cx="51" cy="50.999" r="50" stroke="#fff" stroke-opacity=".4" stroke-width="2" />
+    <path d="M70 50.956s-5.7 13.043-19 13.043-19-13.044-19-13.044S37.7 39 51 39s19 11.956 19 11.956Z" fill="#fff"
+      stroke="#20B6C9" stroke-width="2" stroke-linecap="round" />
+    <ellipse cx="51" cy="51.499" rx="5.971" ry="5.978" fill="#fff" stroke="#20B6C9" stroke-width="2"
+      stroke-linecap="round" />
+  </g>
+
 </svg>

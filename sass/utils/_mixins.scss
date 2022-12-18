@@ -61,8 +61,8 @@
 }
 
 //  Ретінізоване зображення
-@mixin isRetinaDisplay() {
-  @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+@mixin isRetinaDisplay($count) {
+  @media (min-device-pixel-ratio: $count), (min-resolution: #{96*$count}dpi), (min-resolution: #{$count}dppx) {
     @content;
   }
 }

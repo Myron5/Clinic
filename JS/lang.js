@@ -160,7 +160,8 @@ const elements = [
     'Онлайн запис на прийом',
     'Онлайн запись на прием',
   ],
-  [document.querySelectorAll('.hero-sec__num-caption')[0], '22 роки', '22 года'],
+  [document.querySelectorAll('.hero-sec__number span')[0], '22 роки', '22 года'],
+  [document.querySelectorAll('.hero-sec__num-caption')[0], 'успішної роботи', 'успешной работы'],
   [document.querySelectorAll('.hero-sec__num-caption')[1], 'успішної роботи', 'успешной работы'],
   [document.querySelectorAll('.hero-sec__num-caption')[2], 'операцій на рік', 'операций в год'],
   [
