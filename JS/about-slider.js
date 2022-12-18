@@ -1,34 +1,19 @@
-// const el = document.querySelector('.abbility__list');
+const slider = $('.SEC-SLIDER').slick({
+  arrows: true,
+  dots: true,
+  infinite: true,
+  fade: true,
+});
 
-// if (window.screen.width < 1290) {
-//   el.classList.add('SLIDER');
+document.querySelectorAll('.SEC-SLIDER .slick-arrow').forEach(el => (el.textContent = ''));
 
-//   $('.SLIDER').slick({
-//     arrows: false,
-//     dots: true,
-//     infinite: false,
-//   });
-
-//   if (window.screen.width >= 720) $('.SLIDER').slick('slickSetOption', 'slidesToShow', 2);
-//   else $('.SLIDER').slick('slickSetOption', 'slidesToShow', 1);
-// }
-
-// window.addEventListener('resize', e => {
-//   if (window.screen.width >= 1290) {
-//     if (el.classList.contains('slick-initialized')) {
-//       el.classList.remove('SLIDER');
-//       el.slick.unslick();
-//     }
-//   } else {
-//     if (!el.classList.contains('slick-initialized')) {
-//       el.classList.add('SLIDER');
-//       $('.SLIDER').slick({
-//         arrows: false,
-//         dots: true,
-//         infinite: false,
-//       });
-//     }
-//     if (window.screen.width >= 720) $('.SLIDER').slick('slickSetOption', 'slidesToShow', 2);
-//     else $('.SLIDER').slick('slickSetOption', 'slidesToShow', 1);
-//   }
-// });
+const checkSlideNum = () => {
+  const numRef = document.querySelector('.about__number');
+  const activeRef = document.querySelector('.SEC-SLIDER .slick-active button');
+  const elLength = document.querySelector('.SEC-SLIDER .slick-track').children.length;
+  numRef.textContent = `${activeRef.textContent}/${elLength}`;
+};
+checkSlideNum();
+document.querySelectorAll('.SEC-SLIDER .slick-arrow').forEach(el => {
+  el.addEventListener('click', checkSlideNum);
+});
