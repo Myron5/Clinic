@@ -18,14 +18,17 @@
   }
 
   &__container {
+    @media (min-width: 1340px) {
+      width: 890px;
+    }
+
     @include desktop() {
       position: absolute;
       top: 100%;
       left: calc(100% - 80px);
       transform: translate(-100%, calc(-80px - 100%));
 
-      width: 890px;
-      max-width: 890px;
+      width: 870px;
     }
   }
 
