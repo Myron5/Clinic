@@ -1,0 +1,727 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="shortcut icon" href="./assets/favicon.png" type="image/png" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;0,900;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
+    />
+  </head>
+  <body>
+    <header class="header">
+      <div class="container header__container">
+        <a class="header-logo" href="./index.html">
+          <svg class="header-logo__icon">
+            <use href="./assets/sprite-hed.svg#logo"></use>
+          </svg>
+        </a>
+        <button class="header__burger" type="button" data-open-menu></button>
+        <div class="header__right">
+          <address class="adress header_adress header__upper">
+            <a class="adress__license" href="license.txt" download
+              >Ліцензія № 2588 від 20.12.2019 року</a
+            >
+            <a class="adress__street" href="">м. Полтава, Геннадія Біліченка, 29Б</a>
+            <a class="adress__tel" href="tel:+380504052000">+38 (050) 405-20-00</a>
+          </address>
+          <div class="header__delimiter"></div>
+          <div class="header__lower">
+            <nav class="nav header__nav">
+              <ul class="nav__list">
+                <li class="nav__item nav-services">
+                  <a href="" class="nav__link nav__link--arrow">Послуги</a>
+                  <div class="nav-services__container">
+                    <ul class="nav-services__list">
+                      <li class="nav-services__item">
+                        <a class="nav-services__link" href="">Лікування катаракти</a>
+                      </li>
+                      <li class="nav-services__item">
+                        <a class="nav-services__link" href="">Лазерна корекція зору</a>
+                      </li>
+                      <li class="nav-services__item">
+                        <a class="nav-services__link" href=""
+                          >Хірургія сітківки та склоподібного тіла</a
+                        >
+                      </li>
+                      <li class="nav-services__item">
+                        <a class="nav-services__link" href="">Дитяча офтальмологія</a>
+                      </li>
+                      <li class="nav-services__item">
+                        <a class="nav-services__link" href="">Лазерні методи лікування</a>
+                      </li>
+                      <li class="nav-services__item">
+                        <a class="nav-services__link" href=""
+                          >Введення препаратів в скловидне тіло</a
+                        >
+                      </li>
+                      <li class="nav-services__item">
+                        <a class="nav-services__link" href="">Лікування глаукоми</a>
+                      </li>
+                      <li class="nav-services__item">
+                        <a class="nav-services__link" href="">Окуляри та контактні лінзи</a>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="nav__item nav-doctors">
+                  <a href="" class="nav__link nav__link--arrow">Лікарі</a>
+                  <div class="nav-doctors__container">
+                    <ul class="nav-doctors__list">
+                      <li class="nav-doctors__item">
+                        <a class="nav-doctors__link" href="">Шаткун Андрій Анатолійович</a>
+                      </li>
+                      <li class="nav-doctors__item">
+                        <a class="nav-doctors__link" href="">Наконечний Денис Олександрович</a>
+                      </li>
+                      <li class="nav-doctors__item">
+                        <a class="nav-doctors__link" href="">Клочко Марина Миколаївна</a>
+                      </li>
+                      <li class="nav-doctors__item">
+                        <a class="nav-doctors__link" href="">Симітко Тетяна Сергіївна</a>
+                      </li>
+                      <li class="nav-doctors__item">
+                        <a class="nav-doctors__link" href="">Миронова Ірина Сергіївна</a>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="nav__item"><a href="" class="nav__link">Ціни</a></li>
+                <li class="nav__item"><a href="" class="nav__link">Акції</a></li>
+                <li class="nav__item"><a href="" class="nav__link">Відгуки</a></li>
+                <li class="nav__item"><a href="" class="nav__link">Контакти</a></li>
+              </ul>
+              <button class="nav__btn nav__btn--active nav__btn--ua" disabled type="button">
+                ua
+              </button>
+              <button class="nav__btn nav__btn--ru" type="button">ru</button>
+            </nav>
+          </div>
+        </div>
+        <div class="mob-menu mob-menu--is-closed header__mob-menu" data-menu-container>
+          <div class="mob-menu__container">
+            <nav class="mob-menu__nav">
+              <div class="mob-menu__btn-block">
+                <button
+                  class="mob-menu__lang-btn mob-menu__lang-btn--active mob-nav__btn--ua"
+                  type="button"
+                  disabled
+                >
+                  ua
+                </button>
+                <button class="mob-menu__lang-btn mob-nav__btn--ru" type="button">ru</button>
+                <button class="mob-menu__close-btn" type="button" data-close-menu></button>
+              </div>
+              <ul class="mob-nav__list">
+                <!-- Services -->
+                <li class="mob-nav__item mob-services">
+                  <a href="" class="mob-nav__link mob-nav__link--arrow">Послуги</a>
+                  <div class="mob-services__container">
+                    <ul class="mob-services__list">
+                      <li class="mob-services__item">
+                        <a class="mob-services__link" href="">Лікування катаракти</a>
+                      </li>
+                      <li class="mob-services__item">
+                        <a class="mob-services__link" href="">Лазерна корекція зору</a>
+                      </li>
+                      <li class="mob-services__item">
+                        <a class="mob-services__link" href=""
+                          >Хірургія сітківки та склоподібного тіла</a
+                        >
+                      </li>
+                      <li class="mob-services__item">
+                        <a class="mob-services__link" href="">Дитяча офтальмологія</a>
+                      </li>
+                      <li class="mob-services__item">
+                        <a class="mob-services__link" href="">Лазерні методи лікування</a>
+                      </li>
+                      <li class="mob-services__item">
+                        <a class="mob-services__link" href=""
+                          >Введення препаратів в скловидне тіло</a
+                        >
+                      </li>
+                      <li class="mob-services__item">
+                        <a class="mob-services__link" href="">Лікування глаукоми</a>
+                      </li>
+                      <li class="mob-services__item">
+                        <a class="mob-services__link" href="">Окуляри та контактні лінзи</a>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+                <!-- Doctors -->
+                <li class="mob-nav__item mob-doctors">
+                  <a href="" class="mob-nav__link mob-nav__link--arrow">Лікарі</a>
+                  <div class="mob-doctors__container">
+                    <ul class="mob-doctors__list">
+                      <li class="mob-doctors__item">
+                        <a class="mob-doctors__link" href="">Шаткун Андрій Анатолійович</a>
+                      </li>
+                      <li class="mob-doctors__item">
+                        <a class="mob-doctors__link" href="">Наконечний Денис Олександрович</a>
+                      </li>
+                      <li class="mob-doctors__item">
+                        <a class="mob-doctors__link" href="">Клочко Марина Миколаївна</a>
+                      </li>
+                      <li class="mob-doctors__item">
+                        <a class="mob-doctors__link" href="">Симітко Тетяна Сергіївна</a>
+                      </li>
+                      <li class="mob-doctors__item">
+                        <a class="mob-doctors__link" href="">Миронова Ірина Сергіївна</a>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="mob-nav__item"><a href="" class="mob-nav__link">Ціни</a></li>
+                <li class="mob-nav__item"><a href="" class="mob-nav__link">Акції</a></li>
+                <li class="mob-nav__item"><a href="" class="mob-nav__link">Відгуки</a></li>
+                <li class="mob-nav__item"><a href="" class="mob-nav__link">Контакти</a></li>
+              </ul>
+            </nav>
+            <address class="mob-adress header_mob-adress">
+              <a class="mob-adress__license" href="license.txt" download
+                >Ліцензія № 2588 від 20.12.2019 року</a
+              >
+              <a class="mob-adress__street" href="">м. Полтава, Геннадія Біліченка, 29Б</a>
+              <a class="mob-adress__tel" href="tel:+380504052000">+38 (050) 405-20-00</a>
+            </address>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main>
+      <section class="hero-sec">
+        <div class="container hero-sec__container">
+          <div class="hero-sec__left-side">
+            <h1 class="hero-sec__title">
+              <span>Центр сучасної</span> <span class="hero-sec__title--blue">офтальмології</span>
+            </h1>
+            <p class="hero-sec__txt">
+              Сучісні методи лікування, які застосовуються в центрі «Світогляд», дозволяють
+              позбутися захворювання швидко і безболісно, та повернути повноцінний зір
+            </p>
+            <ul class="hero-sec__links">
+              <li class="hero-sec__link-item">
+                <a href="" class="hero-sec__link">Онлайн запис на прийом</a>
+              </li>
+              <li class="hero-sec__link-item">
+                <a href="" class="hero-sec__link">
+                  <svg class="hero-sec__icon" width="25" height="25">
+                    <use href="./assets/sprite.svg#main-tel"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="hero-sec__link-item">
+                <a href="" class="hero-sec__link">
+                  <svg class="hero-sec__icon" width="25" height="25">
+                    <use href="./assets/sprite.svg#main-faq"></use>
+                  </svg>
+                </a>
+              </li>
+            </ul>
+            <ul class="hero-sec__numbers">
+              <li class="hero-sec__number-item">
+                <p class="hero-sec__number">
+                  <span>22 роки</span> <span class="hero-sec__num-caption">успішної роботи</span>
+                </p>
+              </li>
+              <li class="hero-sec__number-item">
+                <p class="hero-sec__number">
+                  5000+<span class="hero-sec__num-caption">операцій на рік</span>
+                </p>
+              </li>
+              <li class="hero-sec__number-item">
+                <p class="hero-sec__number">
+                  15 000<span class="hero-sec__num-caption">здорових поглядів</span>
+                </p>
+              </li>
+            </ul>
+          </div>
+          <div class="hero-sec__right-side">
+            <picture class="hero-sec__thumb">
+              <source
+                srcset="
+                  ./assets/hero_center@1x.webp    580w,
+                  ./assets/hero_center@1.5x.webp  870w,
+                  ./assets/hero_center@2x.webp   1160w,
+                  ./assets/hero_center@3x.webp   1740w
+                "
+                sizes="(min-width: 1290px) 580px, (min-width: 720px) 420px, (min-width: 360px) 320px, 100vw"
+                type="image/webp"
+              />
+              <source
+                srcset="
+                  ./assets/hero_center@1x.png    580w,
+                  ./assets/hero_center@1.5x.png  870w,
+                  ./assets/hero_center@2x.png   1160w,
+                  ./assets/hero_center@3x.png   1740w
+                "
+                sizes="(min-width: 1200px) 270px, (min-width: 768px) 354px, (min-width: 480px) 450px, 100vw"
+                type="image/png"
+              />
+
+              <img
+                class="hero-sec__img"
+                src="./assets/hero_center@1x.png"
+                alt="Літні люди почуваються здорово"
+              />
+            </picture>
+          </div>
+        </div>
+      </section>
+
+      <section class="abbility">
+        <div class="container">
+          <h2 class="abbility__title"><span class="abbility__title-span">Ми вміємо</span></h2>
+          <ul class="abbility__list">
+            <li class="abbility__item abbility__item--first">
+              <!-- ddddddd -->
+              <picture class="abbility__thumb abbility__thumb--first">
+                <source
+                  srcset="
+                    ./assets/1.webp     271w,
+                    ./assets/1@1.5.webp 407w,
+                    ./assets/1@2x.webp  542w,
+                    ./assets/1@3x.webp  813w
+                  "
+                  sizes="(min-width: 360px) 260px, 100vw"
+                  type="image/webp"
+                />
+                <source
+                  srcset="
+                    ./assets/1.png     271w,
+                    ./assets/1@1.5.png 407w,
+                    ./assets/1@2x.png  542w,
+                    ./assets/1@3x.png  813w
+                  "
+                  sizes="(min-width: 360px) 260px, 100vw"
+                  type="image/png"
+                />
+
+                <img
+                  class="abbility__img"
+                  src="./assets/1.png"
+                  alt="Старі люди дбають про здоров'я одне одного"
+                />
+              </picture>
+              <!-- dddddddd -->
+              <div class="abbility__left-side abbility__left-side--first">
+                <h3 class="abbility__name abbility__name--first">
+                  Результативно оперувати катаракту
+                </h3>
+
+                <p class="abbility__text abbility__text--first">
+                  Катаракта може розвивається з віком, а також від травми ока, попередньої операції
+                  на очах, при дегенеративній міопії...
+                </p>
+                <a class="abbility__link abbility__link--first" href=""
+                  ><span class="abbility__link--text">Детальніше</span
+                  ><span class="abbility__link--icon"></span
+                ></a>
+              </div>
+            </li>
+            <li class="abbility__item">
+              <!-- ddddddd -->
+              <picture class="abbility__thumb">
+                <source
+                  srcset="
+                    ./assets/2.webp     271w,
+                    ./assets/2@1.5.webp 407w,
+                    ./assets/2@2x.webp  542w,
+                    ./assets/2@3x.webp  813w
+                  "
+                  sizes="(min-width: 360px) 260px, 100vw"
+                  type="image/webp"
+                />
+                <source
+                  srcset="
+                    ./assets/2.jpg     260w,
+                    ./assets/2@1.5.jpg 390w,
+                    ./assets/2@2x.jpg  520w,
+                    ./assets/2@3x.jpg  780w
+                  "
+                  sizes="(min-width: 360px) 260px, 100vw"
+                  type="image/jpeg"
+                />
+
+                <img class="abbility__img" src="./assets/2.jpg" alt="Лазерна корекція ока" />
+              </picture>
+              <!-- dddddddd -->
+              <h3 class="abbility__name">Проводити лазерну корекцію зору</h3>
+              <p class="abbility__text">
+                Захворювання сітківки в першу чергу лікується за допомогою термолазера
+              </p>
+              <a class="abbility__link" href=""
+                ><span class="abbility__link--text">Детальніше</span
+                ><span class="abbility__link--icon"></span
+              ></a>
+            </li>
+            <li class="abbility__item">
+              <!-- ddddddd -->
+              <picture class="abbility__thumb">
+                <source
+                  srcset="
+                    ./assets/3.webp     260w,
+                    ./assets/3@1.5.webp 390w,
+                    ./assets/3@2x.webp  520w,
+                    ./assets/3@3x.webp  780w
+                  "
+                  sizes="(min-width: 360px) 260px, 100vw"
+                  type="image/webp"
+                />
+                <source
+                  srcset="
+                    ./assets/3.jpg     260w,
+                    ./assets/3@1.5.jpg 390w,
+                    ./assets/3@2x.jpg  520w,
+                    ./assets/3@3x.jpg  780w
+                  "
+                  sizes="(min-width: 360px) 260px, 100vw"
+                  type="image/jpeg"
+                />
+
+                <img class="abbility__img" src="./assets/3.jpg" alt="Операція на сітківку ока" />
+              </picture>
+              <!-- dddddddd -->
+              <h3 class="abbility__name abbility__name--short">Рятувати сітківку</h3>
+              <p class="abbility__text">
+                Гостра патологія, яка без негайного оперативного лікування може...
+              </p>
+              <a class="abbility__link" href=""
+                ><span class="abbility__link--text">Детальніше</span
+                ><span class="abbility__link--icon"></span
+              ></a>
+            </li>
+            <li class="abbility__item">
+              <!-- ddddddd -->
+              <picture class="abbility__thumb">
+                <source
+                  srcset="
+                    ./assets/4.webp     260w,
+                    ./assets/4@1.5.webp 390w,
+                    ./assets/4@2x.webp  520w,
+                    ./assets/4@3x.webp  780w
+                  "
+                  sizes="(min-width: 360px) 260px, 100vw"
+                  type="image/webp"
+                />
+                <source
+                  srcset="
+                    ./assets/4.png     260w,
+                    ./assets/4@1.5.png 390w,
+                    ./assets/4@2x.png  520w,
+                    ./assets/4@3x.png  780w
+                  "
+                  sizes="(min-width: 360px) 260px, 100vw"
+                  type="image/png"
+                />
+
+                <img class="abbility__img" src="./assets/4.png" alt="Дитина усміхається лікареві" />
+              </picture>
+              <!-- dddddddd -->
+              <h3 class="abbility__name">Знаходити спільну мову з дітьми</h3>
+              <p class="abbility__text">
+                В центрі сучасної офтальмології "Світогляд" проводить консультації...
+              </p>
+              <a class="abbility__link" href=""
+                ><span class="abbility__link--text">Детальніше</span
+                ><span class="abbility__link--icon"></span
+              ></a>
+            </li>
+            <li class="abbility__item">
+              <!-- ddddddd -->
+              <picture class="abbility__thumb">
+                <source
+                  srcset="
+                    ./assets/5.webp     265w,
+                    ./assets/5@1.5.webp 398w,
+                    ./assets/5@2x.webp  530w,
+                    ./assets/5@3x.webp  795w
+                  "
+                  sizes="(min-width: 360px) 265px, 100vw"
+                  type="image/webp"
+                />
+                <source
+                  srcset="
+                    ./assets/5.png     265w,
+                    ./assets/5@1.5.png 398w,
+                    ./assets/5@2x.png  530w,
+                    ./assets/5@3x.png  795w
+                  "
+                  sizes="(min-width: 360px) 265px, 100vw"
+                  type="image/png"
+                />
+
+                <img
+                  class="abbility__img"
+                  src="./assets/5.png"
+                  alt="Дівчина радіє знижкам на окуляри"
+                />
+              </picture>
+              <!-- dddddddd -->
+              <h3 class="abbility__name">Підбирати окуляри та контактні лінзи</h3>
+              <p class="abbility__text">
+                В нормі заломлююча система ока (рогівка та кришталик) фокусує...
+              </p>
+              <a class="abbility__link" href=""
+                ><span class="abbility__link--text">Детальніше</span
+                ><span class="abbility__link--icon"></span
+              ></a>
+            </li>
+            <li class="abbility__item abbility__item--last">
+              <!-- ddddddd -->
+              <picture class="abbility__thumb abbility__thumb--last">
+                <source
+                  srcset="
+                    ./assets/6.webp     312w,
+                    ./assets/6@1.5.webp 468w,
+                    ./assets/6@2x.webp  623w,
+                    ./assets/6@3x.webp  934w
+                  "
+                  sizes="(min-width: 360px) 260px, 100vw"
+                  type="image/webp"
+                />
+                <source
+                  srcset="
+                    ./assets/6.png     312w,
+                    ./assets/6@1.5.png 468w,
+                    ./assets/6@2x.png  623w,
+                    ./assets/6@3x.png  934w
+                  "
+                  sizes="(min-width: 360px) 300px, 100vw"
+                  type="image/png"
+                />
+
+                <img
+                  class="abbility__img"
+                  src="./assets/6.png"
+                  alt="Старі люди дбають про здоров'я одне одного"
+                  width="300"
+                />
+              </picture>
+              <!-- dddddddd -->
+              <div class="abbility__left-side abbility__left-side--last">
+                <h3 class="abbility__name abbility__name--last">
+                  Вирішити будь-які проблеми з зором
+                </h3>
+                <p class="abbility__text abbility__text--last">
+                  Ознайомтесь з іншими послугами, що пропонує клініка
+                </p>
+                <a class="abbility__link abbility__link--last" href=""
+                  ><span class="abbility__link--text">Переглянути всі послуги</span></a
+                >
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="about">
+        <div class="about__left-side">
+          <ul class="about__slides SEC-SLIDER">
+            <li class="about__slide-item">
+              <!-- ddddddd -->
+              <picture class="about__thumb">
+                <source
+                  srcset="
+                    ./assets/slide1-mob.webp       360w,
+                    ./assets/slide1-mob@1.5x.webp  541w,
+                    ./assets/slide1-mob@2x.webp    720w,
+                    ./assets/slide1-mob@3x.webp   1080w,
+                    ./assets/slide-1.webp         1305w,
+                    ./assets/slide-1@1.5x.webp    1958w,
+                    ./assets/slide-1@2x.webp      2610w,
+                    ./assets/slide-1@3x.webp      3915w
+                  "
+                  sizes="100%"
+                  type="image/webp"
+                />
+                <source
+                  srcset="
+                    ./assets/slide1-mob.jpg       360w,
+                    ./assets/slide1-mob@1.5x.jpg  541w,
+                    ./assets/slide1-mob@2x.jpg    720w,
+                    ./assets/slide1-mob@3x.jpg   1080w,
+                    ./assets/slide-1.jpg         1305w,
+                    ./assets/slide-1@1.5x.jpg    1958w,
+                    ./assets/slide-1@2x.jpg      2610w,
+                    ./assets/slide-1@3x.jpg      3915w
+                  "
+                  sizes="100%"
+                  type="image/jpeg"
+                />
+
+                <img
+                  class="abbility__img"
+                  src="./assets/slide-1.jpg"
+                  alt="Лікар обстежує пацієнта"
+                />
+              </picture>
+              <!-- dddddddd -->
+            </li>
+            <li class="about__slide-item"><div class="about__color-box"></div></li>
+            <li class="about__slide-item"><div class="about__color-box"></div></li>
+            <li class="about__slide-item"><div class="about__color-box"></div></li>
+            <li class="about__slide-item"><div class="about__color-box"></div></li>
+            <li class="about__slide-item"><div class="about__color-box"></div></li>
+            <li class="about__slide-item"><div class="about__color-box"></div></li>
+          </ul>
+        </div>
+        <div class="about__right__side">
+          <div class="container about__container">
+            <h2 class="about__title"><span class="about__title-span">Про нас</span></h2>
+            <p class="about__text">
+              «Світогляд» - це найсучасніший центр офтальмології, який прагне досягти своїх
+              зобов'язань надавати комплексні медичні послуги для своїх клієнтів
+            </p>
+            <div class="about__number"></div>
+          </div>
+          <a href="" class="about__link">Переглянути відео </a>
+          <p class="about__video-caption">Це займе лише 36 секунд</p>
+          <div class="about__decor"></div>
+        </div>
+      </section>
+
+      <section class="discount">
+        <div class="container">
+          <h2 style="display: none">Знижки</h2>
+          <ul class="discount__cataloge discount-slider">
+            <li class="discount__card">
+              <!-- PICTURE -->
+              <picture class="discount__thumb">
+                <source
+                  srcset="
+                    ./assets/discount-card-1.webp     264w,
+                    ./assets/discount-card-1@1.5.webp 396w,
+                    ./assets/discount-card-1@2x.webp  528w,
+                    ./assets/discount-card-1@3x.webp  792w
+                  "
+                  sizes="100vw"
+                  type="image/webp"
+                />
+                <source
+                  srcset="
+                    ./assets/discount-card-1.png     264w,
+                    ./assets/discount-card-1@1.5.png 396w,
+                    ./assets/discount-card-1@2x.png  528w,
+                    ./assets/discount-card-1@3x.png  792w
+                  "
+                  sizes="100vw"
+                  type="image/png"
+                />
+                <img
+                  class="discount__img"
+                  src="./assets/discount-card-1.png"
+                  alt="Мати цілує дитину"
+                />
+              </picture>
+              <!-- PICTURE -->
+              <div class="discount__card-right">
+                <h3 class="discount__title">Для цивільних</h3>
+                <p class="discount__capture">з травмами ока отриманими внаслідок бойових дій</p>
+                <ul class="discount__list">
+                  <li class="discount__unit">
+                    <span class="discount__num">-50&percnt;</span>Діагностика
+                  </li>
+                  <li class="discount__unit">
+                    <span class="discount__num">-20&percnt;</span>Операція
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li class="discount__card">
+              <!-- PICTURE -->
+              <picture class="discount__thumb">
+                <source
+                  srcset="
+                    ./assets/discount-card-2.webp     260w,
+                    ./assets/discount-card-2@1.5.webp 390w,
+                    ./assets/discount-card-2@2x.webp  520w,
+                    ./assets/discount-card-2@3x.webp  780w
+                  "
+                  sizes="100vw"
+                  type="image/webp"
+                />
+                <source
+                  srcset="
+                    ./assets/discount-card-2.png     260w,
+                    ./assets/discount-card-2@1.5.png 390w,
+                    ./assets/discount-card-2@2x.png  520w,
+                    ./assets/discount-card-2@3x.png  780w
+                  "
+                  sizes="100vw"
+                  type="image/png"
+                />
+                <img
+                  class="discount__img"
+                  src="./assets/discount-card-2.png"
+                  alt="Жінкa в Збройних силах України"
+                />
+              </picture>
+              <!-- PICTURE -->
+              <div class="discount__card-right">
+                <h3 class="discount__title">Для військових службовців</h3>
+                <ul class="discount__list">
+                  <li class="discount__unit">
+                    <span class="discount__num">-30-50&percnt;</span>Знижка на всі види операцій
+                  </li>
+                  <li class="discount__unit">
+                    <span class="discount__num">Безкоштовно</span>Діагностика
+                  </li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Працюю тут -->
+      <section class="reviews">
+        <div class="container">
+          <div class="reviews__upper">
+            <div class="reviews__smi-a-txt">
+              <div class="reviews__left-decor">
+                <span class="reviews__smile"></span>
+                <span class="reviews__smile"></span>
+                <span class="reviews__smile"></span>
+              </div>
+
+              <div class="reviews__text-box">
+                <h2 class="reviews__title">Відгуки наших пацієнтів після лікування у нас</h2>
+                <p class="reviews__text">
+                  Ваші здорові очі, сповнені радості — щастя для нас. Ми щиро дбаємо про пацієнтів,
+                  тому поєднуємо у своїй роботі сучасні технології та високий рівень обслуговування
+                </p>
+              </div>
+            </div>
+
+            <div class="reviews__right-side">
+              <a href="" class="reviews__link" target="_blank" rel="noreferrer noopener nofollow">
+                Залишити відгук
+              </a>
+              <img class="reviews__img" src="./assets/reviews.png" alt="Google reviews" />
+              <p class="reviews__string">
+                <span class="reviews__stars"></span>
+                <span class="reviews__stars reviews__stars--reverse"></span>
+                <span class="reviews__num"></span>
+                Середня оцінка
+              </p>
+            </div>
+          </div>
+
+          <ul class="reviews__slider"></ul>
+        </div>
+      </section>
+      <!-- ----- -->
+    </main>
+    <footer></footer>
+  </body>
+</html>

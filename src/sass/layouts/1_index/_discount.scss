@@ -1,0 +1,173 @@
+.discount {
+  padding-top: 110px;
+  padding-bottom: 110px;
+
+  background-color: getColor(disabled);
+  // background-color: red;
+
+  &::before,
+  &::after {
+    content: '';
+
+    display: block;
+    width: 100%;
+    height: 60px;
+
+    margin-right: 112px;
+
+    background-image: url('./assets/sprite.svg#bgc-discount');
+    background-size: 277px 58px;
+    background-position: 112px 0;
+  }
+
+  &::after {
+    background-position: 204px 0;
+  }
+
+  &__cataloge {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    margin-left: auto;
+    margin-right: auto;
+
+    max-width: 100%;
+
+    @include tablet() {
+      max-width: 670px;
+    }
+
+    @media (min-width: 1400px) {
+      max-width: 1300px;
+    }
+  }
+
+  &__card {
+    display: flex !important;
+    flex-direction: column;
+
+    max-width: 630px;
+    min-height: 530px;
+
+    @include tablet() {
+      flex-direction: row;
+      justify-content: space-between;
+      gap: 35px;
+      min-height: 310px;
+    }
+
+    padding: 15px 15px 30px;
+    margin: 15px 20px;
+
+    background: #fff;
+    box-shadow: 0px 4px 25px rgba(46, 58, 64, 0.15);
+    border-radius: 20px;
+  }
+
+  &__card-right {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+
+    margin-top: 20px;
+
+    @include tablet() {
+      margin-top: 40px;
+    }
+  }
+
+  &__thumb {
+    @include mobile() {
+      min-width: 260px;
+    }
+  }
+
+  &__img {
+  }
+
+  &__title {
+    font-weight: 500;
+    font-size: 28px;
+    line-height: 120%;
+    font-feature-settings: 'pnum' on, 'lnum' on;
+    color: getColor('txt-black-2');
+  }
+
+  &__capture {
+    margin-top: 5px;
+
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 120%;
+    font-feature-settings: 'pnum' on, 'lnum' on;
+    color: getColor('txt-black-2');
+  }
+
+  &__list {
+    margin-top: auto;
+
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 145%;
+    font-feature-settings: 'pnum' on, 'lnum' on;
+    color: getColor('txt-black-2');
+  }
+
+  &__unit {
+    display: inline;
+
+    @include mobile() {
+      display: flex;
+    }
+    align-items: center;
+    gap: 15px;
+
+    &:not(:first-child) {
+      margin-top: 15px;
+    }
+  }
+
+  &__num {
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    position: relative;
+
+    min-width: 115px;
+    min-height: 50px;
+
+    margin-left: 20px;
+
+    font-weight: 600;
+    text-align: center;
+    font-feature-settings: 'pnum' on, 'lnum' on;
+    color: getColor('txt-black-2');
+
+    background-color: getColor(accent);
+    // background-color: red;
+    border-radius: 7px;
+
+    &::before {
+      content: '';
+
+      display: block;
+      width: 20px;
+      height: 48px;
+
+      position: absolute;
+      top: 50%;
+      left: -18px;
+      transform: translate(0, -50%);
+
+      background-color: getColor(accent);
+      clip-path: polygon(100% 0, 0 50%, 100% 100%);
+    }
+  }
+}
+
+// ------------------------------- discount-slider --------------------------
+
+.discount-slider {
+  @extend %standart-slider;
+}
