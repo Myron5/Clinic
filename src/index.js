@@ -7,6 +7,7 @@ import './JS/discount-slider';
 import './JS/header-menu';
 import './JS/reviews';
 import './server.php';
+import './JS/faq';
 
 import './sass/layouts/1_index.scss';
 
@@ -76,3 +77,9 @@ import './images/1_index/about-sec/decoration/about-figure@3x.png';
 
 // import './images/1_index/reviews-sec/reviews.png';
 // import './images/1_index/reviews-sec/unnamed.png';
+
+// import './images/1_index/faq-sec/think-woman-mob.png';
+// import './images/1_index/faq-sec/think-woman.png';
+// import './images/1_index/faq-sec/think-woman@1.5.png';
+// import './images/1_index/faq-sec/think-woman@2x.png';
+// import './images/1_index/faq-sec/think-woman@3x.png';

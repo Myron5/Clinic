@@ -92,4 +92,9 @@
       d="m12 0 2.821 8.117 8.592.175-6.848 5.191 2.488 8.225L12 16.8l-7.053 4.908 2.488-8.225L.587 8.292l8.592-.175L12 0Z" />
   </g>
 
+  <g id="faq-cross" class="img" fill="none" viewBox="0 0 12 12">
+    <path stroke="#2E3A40" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+      d="M10.243 1.757 6 6m0 0-4.243 4.243M6 6 1.757 1.757M6 6l4.243 4.243" />
+  </g>
+
 </svg>
