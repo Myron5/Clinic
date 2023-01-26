@@ -57,7 +57,10 @@
     color: #ffffff;
 
     @include desktop() {
-      font-size: 48px;
+      font-size: 30px;
+      @include mobile() {
+        font-size: 42px;
+      }
 
       min-width: 100%;
       display: flex;
@@ -210,13 +213,15 @@
       transform: translate(-100%, 0);
       height: 250px;
 
-      background-image: url(./assets/about-figure.webp);
+      background-image: url(./assets/about-figure.png);
 
       background-image: image-set(
         url(./assets/about-figure.webp) type('image/webp') 1x,
+        url(./assets/about-figure@1.5x.webp) type('image/webp') 1.5x,
         url(./assets/about-figure@2x.webp) type('image/webp') 2x,
         url(./assets/about-figure@3x.webp) type('image/webp') 3x,
         url(./assets/about-figure.png) type('image/png') 1x,
+        url(./assets/about-figure@1.5x.png) type('image/webp') 1.5x,
         url(./assets/about-figure@2x.png) type('image/png') 2x,
         url(./assets/about-figure@3x.png) type('image/png') 3x
       );

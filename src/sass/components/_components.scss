@@ -48,26 +48,26 @@
 
   & .slick-arrow {
     display: none;
+    width: 40px;
+    height: 40px;
+
+    font-size: 0;
+
+    position: absolute;
+    top: 50%;
+    left: -35px;
+    translate: -50% -50%;
+    z-index: 3;
+
+    background-color: transparent;
+    background-image: url(./assets/sprite.svg#discount-slider-arrow);
+    background-size: 40px 40px;
+    background-position: 10px 12px;
+    border: 2px solid rgba(32, 182, 201, 0.4);
+    border-radius: 50%;
 
     @media (min-width: 1400px) {
       display: block;
-      width: 40px;
-      height: 40px;
-
-      font-size: 0;
-
-      position: absolute;
-      top: 50%;
-      left: -35px;
-      translate: -50% -50%;
-      z-index: 3;
-
-      background-color: transparent;
-      background-image: url(./assets/sprite.svg#discount-slider-arrow);
-      background-size: 40px 40px;
-      background-position: 10px 12px;
-      border: 2px solid rgba(32, 182, 201, 0.4);
-      border-radius: 50%;
     }
   }
 

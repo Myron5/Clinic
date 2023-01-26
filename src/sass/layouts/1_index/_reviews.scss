@@ -29,7 +29,7 @@
 
     @include desktop() {
       margin-left: 80px;
-      margin-right: 140px;
+      margin-right: 120px;
     }
   }
 
@@ -80,7 +80,10 @@
 
   &__title {
     font-weight: 700;
-    font-size: 48px;
+    font-size: 30px;
+    @include mobile() {
+      font-size: 42px;
+    }
     line-height: 120%;
     font-feature-settings: 'pnum' on, 'lnum' on;
     color: getColor(txt-black-2);
@@ -100,6 +103,8 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
+    margin-left: auto;
 
     @include desktop() {
       display: block;

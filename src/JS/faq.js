@@ -11,7 +11,7 @@ function toggleDisplay(element, btn) {
   else parent.style.backgroundColor = 'transparent';
 
   if (btn.style.transform == 'rotate(45deg)') btn.style.transform = 'rotate(0deg)';
-  else btn.style.transform == 'rotate(45deg)';
+  else btn.style.transform = 'rotate(45deg)';
 }
 
 btnsArr.forEach((btn, idx) => btn.addEventListener('click', e => toggleDisplay(txtArr[idx], btn)));

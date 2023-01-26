@@ -584,7 +584,7 @@
             </p>
             <div class="about__number"></div>
           </div>
-          <a href="" class="about__link">Переглянути відео </a>
+          <a href="" class="about__link">Переглянути відео</a>
           <p class="about__video-caption">Це займе лише 36 секунд</p>
           <div class="about__decor"></div>
         </div>
@@ -629,10 +629,12 @@
                 <p class="discount__capture">з травмами ока отриманими внаслідок бойових дій</p>
                 <ul class="discount__list">
                   <li class="discount__unit">
-                    <span class="discount__num">-50&percnt;</span>Діагностика
+                    <span class="discount__num">-50&percnt;</span>
+                    <span class="dicount__unit--span">Діагностика</span>
                   </li>
                   <li class="discount__unit">
-                    <span class="discount__num">-20&percnt;</span>Операція
+                    <span class="discount__num">-20&percnt;</span>
+                    <span class="dicount__unit--span">Операція</span>
                   </li>
                 </ul>
               </div>
@@ -671,10 +673,12 @@
                 <h3 class="discount__title">Для військових службовців</h3>
                 <ul class="discount__list">
                   <li class="discount__unit">
-                    <span class="discount__num">-30-50&percnt;</span>Знижка на всі види операцій
+                    <span class="discount__num">-30-50&percnt;</span
+                    ><span class="dicount__unit--span">Знижка на всі види операцій</span>
                   </li>
                   <li class="discount__unit">
-                    <span class="discount__num">Безкоштовно</span>Діагностика
+                    <span class="discount__num">Безкоштовно</span
+                    ><span class="dicount__unit--span">Діагностика</span>
                   </li>
                 </ul>
               </div>
@@ -711,7 +715,7 @@
                 <span class="reviews__stars"></span>
                 <span class="reviews__stars reviews__stars--reverse"></span>
                 <span class="reviews__num"></span>
-                Середня оцінка
+                <span class="reviews__string--span">Середня оцінка</span>
               </p>
             </div>
           </div>
@@ -720,7 +724,6 @@
         </div>
       </section>
 
-      <!-- Працюю тут -->
       <section class="faq">
         <div class="container">
           <div class="faq__left-site">
@@ -797,7 +800,84 @@
           <!-- PICTURE -->
         </div>
       </section>
-      <!-- ----- -->
+
+      <section class="news">
+        <div class="container">
+          <h2 class="news__title">Блог / Новини</h2>
+          <ul class="news__slider news-slider"></ul>
+        </div>
+      </section>
+
+      <section class="form">
+        <div class="form__upper-sec">
+          <div class="container form__container">
+            <div class="form__left-side">
+              <span class="form__icon"></span>
+            </div>
+            <div class="form__right-side">
+              <h2 class="form__title">Запишіться на консультацію</h2>
+              <p class="form__txt">
+                <span class="form__txt-1-span-1">Та отримайте</span>
+                <span class="form__txt--span">10% знижку</span>
+                <span class="form__txt-1-span-2">при записі онлайн</span>
+              </p>
+              <form class="form__box">
+                <div class="form__upper-box">
+                  <div class="form__sm-box">
+                    <input class="form__input" type="text" name="data[name]" required /><label
+                      class="form__label"
+                      for="data[name]"
+                      >Ваше ім’я</label
+                    >
+                  </div>
+
+                  <div class="form__sm-box">
+                    <input class="form__input" type="tel" name="data[tel]" required />
+                    <label class="form__label" for="data[tel]">Номер телефону</label>
+                  </div>
+                </div>
+
+                <div class="form__lower-box">
+                  <button class="form__btn" type="submit">Записатись на прийом</button>
+
+                  <div class="form__sm-box">
+                    <button class="form__sm-btn" type="button">
+                      <span class="form__sm-btn-span" style="transform: rotate(45deg)"></span>
+                      <span class="form__sm-btn-span-2">Додати коментар</span>
+                    </button>
+                    <textarea
+                      class="form__input--textarea"
+                      name="data[txt]"
+                      style="display: none"
+                    ></textarea>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+
+        <div class="form__lower-sec">
+          <div class="container form__container">
+            <div class="form__left-side">
+              <span class="form__icon"></span>
+            </div>
+            <div class="form__right-side">
+              <p class="form__txt">
+                <span class="form__txt-2-span-1">Або запишіться по телефону</span>
+              </p>
+              <ul class="form__number-list">
+                <li class="form__number-item">
+                  <a class="form__link" href="tel:+380504052000">+38 (050) 405-20-00</a>
+                </li>
+                <li class="form__number-item">
+                  <a class="form__link" href="tel:+380974052000">+38 (097) 405-20-00</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
     <footer></footer>
   </body>

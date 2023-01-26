@@ -40,22 +40,22 @@
 }
 
 //  Медіа правило для мобілки
-@mixin mobile() {
-  @media (min-width: $mobile) {
+@mixin mobile($value: 0) {
+  @media (min-width: ($mobile + $value)) {
     @content;
   }
 }
 
 //  Медіа правило для таблетки
-@mixin tablet() {
-  @media (min-width: $tablet) {
+@mixin tablet($value: 0) {
+  @media (min-width: ($tablet + $value)) {
     @content;
   }
 }
 
 //  Медіа правило для десктопа
-@mixin desktop() {
-  @media (min-width: $desktop) {
+@mixin desktop($value: 0) {
+  @media (min-width: ($desktop + $value)) {
     @content;
   }
 }
