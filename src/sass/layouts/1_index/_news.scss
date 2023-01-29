@@ -128,7 +128,7 @@
     }
 
     @include desktop() {
-      left: calc(50% - 630px);
+      left: calc(50% - 600px);
     }
   }
 
@@ -140,7 +140,7 @@
     }
 
     @include desktop() {
-      left: calc(50% + 630px);
+      left: calc(50% + 600px);
     }
   }
 }

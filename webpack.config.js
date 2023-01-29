@@ -85,6 +85,10 @@ module.exports = {
           },
         ],
       },
+      {
+        test: /node_modules\/https-proxy-agent\//,
+        use: 'null-loader',
+      },
     ],
   },
   plugins: [
@@ -96,5 +100,27 @@ module.exports = {
   experiments: {
     topLevelAwait: true,
   },
-  // resolve: { fallback: { querystring: false } },
+  resolve: {
+    fallback: {
+      fs: false,
+      tls: false,
+      net: false,
+
+      querystring: false,
+      url: false,
+      os: false,
+      assert: false,
+      request: false,
+
+      http: false,
+      https: false,
+      zlib: false,
+      path: false,
+      stream: false,
+      util: false,
+      crypto: false,
+      child_process: false,
+      buffer: false,
+    },
+  },
 };

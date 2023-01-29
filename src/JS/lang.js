@@ -334,6 +334,68 @@ const elements = [
   [document.querySelectorAll('.form__input')[0], 'Ваше ім’я', 'Ваше имя'],
   [document.querySelectorAll('.form__input')[1], 'Номер телефона', 'Номер телефона'],
   [document.querySelector('.form__sm-btn-span-2'), 'Додати коментар', 'Добавить комментарий'],
+  [document.querySelector('.find__title'), 'Де ми знаходимось', 'Где мы находимся'],
+  [document.querySelectorAll('.find__text .decor-br')[0], 'м. Полтава,', 'г. Полтава,'],
+  [document.querySelector('.find__text .lang-span'), 'Геннадія Біліченка', 'Геннадия Беличенко'],
+  [
+    document.querySelectorAll('.find__text .decor-br')[1],
+    'Понеділок-П’ятниця',
+    'Понедельник-пятница',
+  ],
+  [document.querySelectorAll('.find__text .decor-br')[2], 'Субота', 'Суббота'],
+  [document.querySelectorAll('.find__text .decor-br')[3], 'Неділя', 'Воскресенье'],
+  [document.querySelectorAll('.find__txt--big')[3], 'Вихідний', 'Выходной'],
+  [
+    document.querySelector('.fot-adress__place'),
+    'м. Полтава, вул. Геннадія Біліченка, 29Б',
+    'г. Полтава, ул. Геннадия Беличенко, 29Б',
+  ],
+  [document.querySelector('.fot-adress__register'), 'Запис по телефону', 'Запись по телефону'],
+  [document.querySelectorAll('.footer__title')[0], 'Послуги', 'Услуги'],
+  [document.querySelectorAll('.footer__title')[1], 'Про клініку', 'О клинике'],
+  [
+    document.querySelectorAll('.footer__service-item p')[0],
+    'Лазерна коагуляція сітківки',
+    'Лазерная коагуляция сетчатки',
+  ],
+  [
+    document.querySelectorAll('.footer__service-item p')[1],
+    'Відшарування сітківки',
+    'Отслойка сетчатки',
+  ],
+  [document.querySelectorAll('.footer__service-item p')[2], 'Оптика', 'Оптика'],
+  [
+    document.querySelectorAll('.footer__service-item p')[3],
+    'Лікування глаукоми',
+    'Лечение глаукомы',
+  ],
+  [
+    document.querySelectorAll('.footer__service-item p')[4],
+    'Лікування катаракти',
+    'Лечение катаракты',
+  ],
+  [
+    document.querySelectorAll('.footer__service-item p')[5],
+    'Вікова макулярна дегенерація',
+    'Возрастная макулярная дегенерация',
+  ],
+  [
+    document.querySelectorAll('.footer__service-item p')[6],
+    'Макулярний отвір',
+    'Макулярное отверстие',
+  ],
+  [
+    document.querySelectorAll('.footer__service-item p')[7],
+    'Введення препаратів в скловидне тіло',
+    'Введение препаратов в стекловидное тело',
+  ],
+  [document.querySelector('.footer__pro-item p'), 'Ціни', 'Цены'],
+  [document.querySelector('.footer__pro-item p'), 'Лікарі', 'Врачи'],
+  [document.querySelector('.footer__pro-item p'), 'Обладнання', 'Оборудование'],
+  [document.querySelector('.footer__pro-item p'), 'Пацієнтам', 'Пациентам'],
+  [document.querySelector('.footer__pro-item p'), 'Новини', 'Новости'],
+  [document.querySelector('.footer__pro-item p'), 'Контакти', 'Контакты'],
+  [document.querySelector('.footer__docua'), 'Наш Партнер', 'Наш Партнер'],
 ];
 
 (() => {
@@ -372,6 +434,11 @@ const elements = [
     if (logo.getAttribute('href') == './assets/sprite-hed.svg#logo')
       logo.setAttribute('href', './assets/sprite-hed.svg#logo-ru');
     else logo.setAttribute('href', './assets/sprite-hed.svg#logo');
+
+    const footLogo = document.querySelector('.footer__logo use');
+    if (footLogo.getAttribute('href') == './assets/sprite-hed.svg#logo')
+      footLogo.setAttribute('href', './assets/sprite-hed.svg#logo-ru');
+    else footLogo.setAttribute('href', './assets/sprite-hed.svg#logo');
   }
 
   function toggleDiscountSvg() {

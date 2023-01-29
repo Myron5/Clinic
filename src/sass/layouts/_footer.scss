@@ -1,0 +1,344 @@
+.footer {
+  &__upper-sec {
+    padding-top: 40px;
+    padding-bottom: 100px;
+    background-color: getColor(main);
+
+    & .footer {
+      &__container {
+        @include desktop() {
+          display: flex;
+          justify-content: space-between;
+        }
+      }
+
+      &__first-box {
+        @include desktop() {
+          margin-top: 20px;
+        }
+      }
+
+      &__logo {
+        width: 150px;
+        height: 52px;
+        fill: #fff;
+
+        @include tablet() {
+          width: 250px;
+          height: 86px;
+        }
+
+        @include desktop() {
+          width: 350px;
+          height: 120px;
+        }
+
+        &--thumb {
+          &::after {
+            content: '';
+            display: block;
+
+            width: 100%;
+            height: 1px;
+
+            margin-top: 20px;
+            background-color: #fff;
+
+            @include desktop() {
+              width: 350px;
+            }
+          }
+        }
+      }
+
+      &__adress {
+        margin-top: 30px;
+
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 145%;
+        font-feature-settings: 'pnum' on, 'lnum' on;
+        color: #fff;
+
+        @include desktop() {
+          margin-top: 20px;
+          font-size: 18px;
+        }
+      }
+
+      // ------------------- Second box
+
+      &__second-box {
+        margin-top: 30px;
+      }
+
+      // -------------------  Title block
+
+      &__title-box {
+        &::after {
+          content: '';
+          display: block;
+
+          width: 100%;
+          height: 1px;
+
+          margin-top: 20px;
+          background-color: #fff;
+        }
+
+        @include desktop() {
+          &::after {
+            display: none;
+          }
+        }
+      }
+
+      &__title-flex-box {
+        display: flex;
+        justify-content: space-between;
+      }
+
+      &__title {
+        font-weight: 500;
+        font-size: 22px;
+        line-height: 130%;
+        font-feature-settings: 'pnum' on, 'lnum' on;
+        color: #fff;
+
+        @include desktop() {
+          font-size: 28px;
+        }
+      }
+
+      &__title-btn {
+        display: inline-block;
+        width: 26px;
+        height: 26px;
+
+        border-radius: 50%;
+        background-color: #fff;
+        background-image: url(./assets/sprite-hed.svg#faq-cross);
+        background-size: 12px 12px;
+        background-position: center;
+        background-repeat: no-repeat;
+
+        @include desktop() {
+          display: none;
+        }
+      }
+
+      // -------------------  Service List
+
+      &__service-list {
+        margin-top: 20px;
+      }
+
+      &__service-item {
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 145%;
+        font-feature-settings: 'pnum' on, 'lnum' on;
+        color: #fff;
+
+        &:not(:first-child) {
+          margin-top: 10px;
+        }
+      }
+
+      // -------------------  Third box
+
+      &__third-box {
+        margin-top: 30px;
+      }
+
+      // -------------------  Pro List
+
+      &__pro-list {
+        margin-top: 20px;
+      }
+
+      &__pro-item {
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 145%;
+        font-feature-settings: 'pnum' on, 'lnum' on;
+        color: #fff;
+
+        &:not(:first-child) {
+          margin-top: 10px;
+        }
+      }
+    }
+
+    .fot-adress {
+      &__list {
+      }
+
+      &__item {
+        &--place {
+        }
+
+        &--email {
+          margin-top: 10px;
+        }
+      }
+
+      &__place {
+      }
+
+      &__email {
+      }
+
+      &__register {
+        font-weight: 400;
+
+        margin-top: 30px;
+      }
+
+      &__register-list {
+      }
+
+      &__register-item {
+        font-weight: 700;
+        font-size: 22px;
+        line-height: 120%;
+        font-feature-settings: 'pnum' on, 'lnum' on;
+        color: #ffffff;
+
+        margin-top: 10px;
+
+        @include desktop() {
+          font-size: 28px;
+        }
+      }
+    }
+  }
+
+  &__lower-sec {
+    padding-top: 37px;
+    padding-bottom: 37px;
+
+    & .footer {
+      &__container {
+        display: flex;
+        gap: 20px;
+        justify-content: space-between;
+        flex-direction: column;
+
+        @include tablet() {
+          flex-direction: row;
+          flex-wrap: wrap;
+        }
+
+        @include desktop() {
+          flex-wrap: nowrap;
+        }
+      }
+
+      &__left-col {
+        order: 999;
+
+        font-size: 18px;
+        line-height: 145%;
+        font-feature-settings: 'pnum' on, 'lnum' on;
+        color: getColor(txt-black);
+        text-align: center;
+
+        @include desktop() {
+          text-align: left;
+          order: 0;
+        }
+      }
+
+      &__center-col {
+        text-align: center;
+
+        @include tablet() {
+          text-align: left;
+        }
+      }
+
+      &__links {
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 145%;
+        font-feature-settings: 'pnum' on, 'lnum' on;
+        color: getColor(txt-black);
+      }
+
+      &__link-item {
+        display: inline-flex;
+        align-items: center;
+        gap: 7px;
+
+        padding: 8px 13px;
+        border-radius: 12px;
+
+        &:nth-child(1) {
+          background-color: #ffd2b6;
+          &::before {
+            content: '';
+
+            display: inline-block;
+            width: 22px;
+            height: 22px;
+
+            background-image: url(./assets/sprite-hed.svg#youtube);
+          }
+        }
+        &:nth-child(2) {
+          background-color: #f6fbb9;
+          &::before {
+            content: '';
+
+            display: inline-block;
+            width: 22px;
+            height: 22px;
+
+            background-image: url(./assets/sprite-hed.svg#instagram);
+          }
+        }
+        &:nth-child(3) {
+          background-color: #d5d6ff;
+          &::before {
+            content: '';
+
+            display: inline-block;
+            width: 22px;
+            height: 22px;
+
+            background-image: url(./assets/sprite-hed.svg#facebook);
+          }
+        }
+      }
+
+      &__right-col {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+      }
+
+      &__docua {
+        &-link {
+          border: 2px solid #0957c3;
+          border-radius: 20px;
+          overflow: hidden;
+        }
+
+        &-img {
+        }
+
+        &::after {
+          content: '';
+
+          display: inline-block;
+          width: 22px;
+          height: 10px;
+          margin-left: 10px;
+
+          background-image: url(./assets/sprite-hed.svg#foot-arrow);
+        }
+      }
+    }
+  }
+}

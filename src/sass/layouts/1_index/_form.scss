@@ -147,6 +147,7 @@
 
       border: none;
       background-color: transparent;
+      border-bottom: 2px solid getColor(border);
 
       &--textarea {
         width: 100%;
