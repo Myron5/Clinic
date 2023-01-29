@@ -290,7 +290,6 @@ async function checkIfLastShown() {
   if (lastIsShown) {
     if (news.page <= news.max) {
       news.incrementPage();
-      console.log(news.page, news.max);
       await renderSlides(news.translate);
     } else {
       Notiflix.Notify.warning('🔚 You have reached the end of news');

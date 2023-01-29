@@ -41,17 +41,17 @@ async function getCurrency(url) {
 // ----------------------------------------------------------- Render -----------------------------------------------------------
 
 async function renderReviews() {
-  let data;
+  let resp;
   const lang = checkLang();
 
   try {
-    data = await getCurrency(`./server.php?currency=now&lang=${lang}`);
-    if (!data.rating)
+    resp = await getCurrency(`./server.php?currency=now&lang=${lang}`);
+
+    if (!resp.result.rating)
       throw new Error('😭😔 We so sorry, but something go wrong, and we can`t load reviews');
 
-    const {
-      result: { rating, reviews },
-    } = data;
+    const rating = resp.result.rating;
+    const reviews = resp.result.reviews;
 
     setAverageRating(rating);
 
