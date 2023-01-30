@@ -32,7 +32,7 @@ class NewsApiService {
     });
 
     this.#url = `${NewsApiService.#BASIC_URL}?${this.#params}`;
-    this.translate = false;
+    this.translate = true;
     this.max = 0;
     this.countMessage = 0;
   }
@@ -74,12 +74,12 @@ class NewsApiService {
     try {
       const data = await this.getCurrency(url);
       if (data.responseStatus != 200) throw new Error('Something was wrong');
-      return data.responseData.translatedText;
+      return data.responseData.translatedText.toString();
     } catch (err) {
       if (this.countMessage < 1) {
         Notiflix.Notify.failure('💔 Sorry, but now we can`t translate the news');
         console.log(err.message);
-        this.translate = false;
+        this.translate = true;
       }
       this.countMessage++;
     }
@@ -230,53 +230,52 @@ function myRuMonth(num) {
 async function renderSlides(translate) {
   const lang = checkLang();
   let data;
-
   try {
     data = await news.getQuery();
-    if (!data) throw new Error('no news');
+    if (!data.articles) throw new Error('no news');
     news.max = Math.ceil(data.totalArticles / 3);
     await Promise.all(
       data.articles.map(async article => {
         if (translate) {
           const title_ = await news.translateToLang(lang, article.title);
           const description_ = await news.translateToLang(lang, article.description);
-
           if (title_ && description_) {
             article.title = title_;
             article.description = description_;
           }
         }
         const markup = `
-       <li class="news-slider__item">
-            <div class="news-slider__card">
-                <div class="news-slider__thumb">
-                    <img class='news-slider__img' src="${article.image}" />
-                </div>
-                <div class="news-slider__box">
-                    <h3 class="news-slider__title">${article.title}</h3>
-                    <p class="news-slider__txt">${article.description}</p>
-                    <div class="news-slider__bottom-box">
-                        <time class="news-slider__date" datetime="${
-                          setNoramlDate(article.publishedAt, lang).tag
-                        }">${setNoramlDate(article.publishedAt, lang).content}</time>
-                        <a
-                        class="news-slider__link"
-                        href="${article.url}"
-                        target="_blank"
-                        rel="noreferrer noopener nofollow"
-                        >Читати далі</a>
-                    </div>
-                </div>
+        <li class="news-slider__item">
+          <div class="news-slider__card">
+            <div class="news-slider__thumb">
+              <img class='news-slider__img' src="${article.image}" />
             </div>
+            <div class="news-slider__box">
+              <h3 class="news-slider__title">${article.title}</h3>
+              <p class="news-slider__txt">${article.description}</p>
+              <div class="news-slider__bottom-box">
+                <time class="news-slider__date" datetime="${
+                  setNoramlDate(article.publishedAt, lang).tag
+                }">${setNoramlDate(article.publishedAt, lang).content}</time>
+                <a
+                class="news-slider__link"
+                href="${article.url}"
+                target="_blank"
+                rel="noreferrer noopener nofollow"
+                >Читати далі</a>
+              </div>
+            </div>
+          </div>
         </li>
-    `;
+        `;
         $('.news__slider').slick('slickAdd', markup);
-        return true;
+        return Promise.resolve('sucess');
       })
     );
     return true;
   } catch (err) {
     document.querySelector('.news').style.display = 'none';
+    console.log(err);
     return false;
   }
 }

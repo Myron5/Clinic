@@ -1,5 +1,9 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const HtmlWebpackPartialsPlugin = require('html-webpack-partials-plugin');
+
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
+
 const ImageMinimizerPlugin = require('image-minimizer-webpack-plugin');
 const ImageminWebpWebpackPlugin = require('imagemin-webp-webpack-plugin');
 
@@ -23,6 +27,7 @@ module.exports = {
   },
   module: {
     rules: [
+      // ---- SCSS
       {
         test: /\.(s?css)$/i,
         use: [
@@ -34,11 +39,13 @@ module.exports = {
           { loader: 'sass-loader', options: {} },
         ],
       },
+      // ---- JS
       {
         test: /\.(m?js)$/i,
         exclude: /(node_modules)/,
         use: [{ loader: 'babel-loader', options: {} }],
       },
+      // ---- images
       {
         test: /\.(png|jpe?g|webp|gif)$/i,
         use: [
@@ -61,8 +68,9 @@ module.exports = {
         ],
         type: 'asset',
       },
+      // ---- svg
       {
-        test: /\.(svg|php)$/i,
+        test: /\.(svg)$/i,
         use: [
           {
             loader: 'file-loader',
@@ -74,6 +82,7 @@ module.exports = {
         ],
         type: 'asset',
       },
+      // ---- php
       {
         test: /\.(php)$/i,
         use: [
@@ -85,6 +94,7 @@ module.exports = {
           },
         ],
       },
+      // ---- null
       {
         test: /node_modules\/https-proxy-agent\//,
         use: 'null-loader',
@@ -92,11 +102,75 @@ module.exports = {
     ],
   },
   plugins: [
-    new HtmlWebpackPlugin({ template: './src/index.html' }),
     new MiniCssExtractPlugin(),
     new ImageminWebpWebpackPlugin(),
+    new HtmlWebpackPlugin({
+      title: 'Клініка офтольмології',
+      template: './src/index.html',
+      filename: 'index.html',
+      minify: true,
+    }),
+    new HtmlWebpackPartialsPlugin({
+      path: path.join(__dirname, './src/partials/header.html'),
+      location: 'myhead',
+      template_filename: ['index.html'],
+    }),
+    new HtmlWebpackPartialsPlugin({
+      path: path.join(__dirname, './src/partials/hero.html'),
+      location: 'hero',
+      template_filename: ['index.html'],
+    }),
+    new HtmlWebpackPartialsPlugin({
+      path: path.join(__dirname, './src/partials/abbility.html'),
+      location: 'abbility',
+      template_filename: ['index.html'],
+    }),
+    new HtmlWebpackPartialsPlugin({
+      path: path.join(__dirname, './src/partials/about.html'),
+      location: 'about',
+      template_filename: ['index.html'],
+    }),
+    new HtmlWebpackPartialsPlugin({
+      path: path.join(__dirname, './src/partials/discount.html'),
+      location: 'discount',
+      template_filename: ['index.html'],
+    }),
+    new HtmlWebpackPartialsPlugin({
+      path: path.join(__dirname, './src/partials/reviews.html'),
+      location: 'reviews',
+      template_filename: ['index.html'],
+    }),
+    new HtmlWebpackPartialsPlugin({
+      path: path.join(__dirname, './src/partials/faq.html'),
+      location: 'faq',
+      template_filename: ['index.html'],
+    }),
+    new HtmlWebpackPartialsPlugin({
+      path: path.join(__dirname, './src/partials/news.html'),
+      location: 'news',
+      template_filename: ['index.html'],
+    }),
+    new HtmlWebpackPartialsPlugin({
+      path: path.join(__dirname, './src/partials/form.html'),
+      location: 'myform',
+      template_filename: ['index.html'],
+    }),
+    new HtmlWebpackPartialsPlugin({
+      path: path.join(__dirname, './src/partials/find.html'),
+      location: 'find',
+      template_filename: ['index.html'],
+    }),
+    new HtmlWebpackPartialsPlugin({
+      path: path.join(__dirname, './src/partials/footer.html'),
+      location: 'myfoot',
+      template_filename: ['index.html'],
+    }),
   ],
-  stats: 'errors-only',
+  optimization: {
+    minimize: true,
+    minimizer: [new CssMinimizerPlugin()],
+  },
+
   experiments: {
     topLevelAwait: true,
   },
@@ -123,4 +197,5 @@ module.exports = {
       buffer: false,
     },
   },
+  stats: 'errors-only',
 };

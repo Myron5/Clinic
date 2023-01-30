@@ -45,7 +45,10 @@ async function renderReviews() {
   const lang = checkLang();
 
   try {
-    resp = await getCurrency(`./server.php?currency=now&lang=${lang}`);
+    // resp = await getCurrency(`./server.php?currency=now&lang=${lang}`);
+    resp = await getCurrency(
+      'https://maps.googleapis.com/maps/api/place/details/json?key=AIzaSyDUEvyG1oTLG9wJiVtBOZHjQ17zQWK46hw&place_id=ChIJEQNYIIIv2EARV3mQsxSUxJ8&language=uk&reviews_sort=newest'
+    );
 
     if (!resp.result.rating)
       throw new Error('😭😔 We so sorry, but something go wrong, and we can`t load reviews');
@@ -67,7 +70,7 @@ async function renderReviews() {
           <img src="${review.profile_photo_url}" alt="" class="rev-card__img" />
           <h3 class="rev-card__name">${review.author_name}</h3>
           <div class="rev-card__mark"><div class="rev-card__mark--reverse" style='width: ${
-            130 - 26 * review.rating
+            132 - 26 * review.rating
           }px !important;'></div></div>
           <p class="rev-card__date">${dateStr}</p>
           <p class="rev-card__text">

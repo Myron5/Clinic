@@ -74,7 +74,7 @@
     position: relative;
     max-width: 300px;
     height: 600px;
-    margin: 10px 15px;
+    margin: 10px 10px;
     padding: 30px 20px;
 
     background: #ffffff;
@@ -232,9 +232,13 @@
 
     &--last {
       background-color: getColor(accent);
-      padding: 20px 30px 20px 30px;
+      padding: 20px 20px 20px 20px;
       box-shadow: 0px 4px 12px rgba(25, 31, 28, 0.15);
       border-radius: 40px;
+
+      @include desktop() {
+        min-width: 290px;
+      }
 
       &::after {
         content: '';
@@ -284,6 +288,11 @@
       display: flex;
       flex-direction: column;
       min-width: 300px;
+      padding-right: calc(150px - 20%);
+
+      @include mobile() {
+        padding-right: 40px;
+      }
     }
   }
 }
